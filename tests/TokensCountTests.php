@@ -3,8 +3,10 @@
 require_once "vendor/autoload.php";
 require_once "src/lib.php";
 
+use PHPUnit\Framework\Attributes\CoversFunction;
 use PHPUnit\Framework\TestCase;
 
+#[CoversFunction("token_count")]
 class TokensCountTests extends TestCase {
     public function testTokensCountOnEmptyList() {
         $tokens = array();
